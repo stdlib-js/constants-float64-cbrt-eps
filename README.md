@@ -18,52 +18,44 @@ limitations under the License.
 
 -->
 
-# Cube Root of Epsilon
+# CBRT_EPS
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > [Cube root][@stdlib/math/base/special/cbrt] of [double-precision floating-point epsilon][@stdlib/constants/float64/eps].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/constants-float64-cbrt-eps
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-FLOAT64_CBRT_EPSILON = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js' )
+var CBRT_EPS = require( '@stdlib/constants-float64-cbrt-eps' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var FLOAT64_CBRT_EPSILON = require( 'path/to/vendor/umd/constants-float64-cbrt-eps/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.FLOAT64_CBRT_EPSILON;
-})();
-</script>
-```
-
-#### FLOAT64_CBRT_EPSILON
+#### CBRT_EPS
 
 [Cube root][@stdlib/math/base/special/cbrt] of [double-precision floating-point epsilon][@stdlib/constants/float64/eps].
 
 ```javascript
-var bool = ( FLOAT64_CBRT_EPSILON === 0.0000060554544523933395 );
+var bool = ( CBRT_EPS === 0.0000060554544523933395 );
 // returns true
 ```
 
@@ -77,16 +69,11 @@ var bool = ( FLOAT64_CBRT_EPSILON === 0.0000060554544523933395 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-max@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var abs = require( '@stdlib/math-base-special-abs' );
+var max = require( '@stdlib/math-base-special-max' );
+var randu = require( '@stdlib/random-base-randu' );
+var CBRT_EPS = require( '@stdlib/constants-float64-cbrt-eps' );
 
 var bool;
 var a;
@@ -98,7 +85,7 @@ function isApprox( a, b ) {
     var tol;
 
     delta = abs( a - b );
-    tol = FLOAT64_CBRT_EPSILON * max( abs( a ), abs( b ) );
+    tol = CBRT_EPS * max( abs( a ), abs( b ) );
 
     return ( delta <= tol );
 }
@@ -109,16 +96,65 @@ for ( i = 0; i < 100; i++ ) {
     bool = isApprox( a, b );
     console.log( '%d %s approximately equal to %d. Delta: %d.', a, ( bool ) ? 'is' : 'is not', b, abs( a - b ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/constants/float64/cbrt_eps.h"
+```
+
+#### STDLIB_CONSTANT_FLOAT64_CBRT_EPS
+
+Macro for the [cube root][@stdlib/math/base/special/cbrt] of [double-precision floating-point epsilon][@stdlib/constants/float64/eps].
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -204,13 +240,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/constants-float64-cbrt-eps/main/LICENSE
 
-[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt/tree/umd
+[@stdlib/math/base/special/cbrt]: https://github.com/stdlib-js/math-base-special-cbrt
 
 <!-- <related-links> -->
 
-[@stdlib/constants/float64/eps]: https://github.com/stdlib-js/constants-float64-eps/tree/umd
+[@stdlib/constants/float64/eps]: https://github.com/stdlib-js/constants-float64-eps
 
-[@stdlib/constants/float64/sqrt-eps]: https://github.com/stdlib-js/constants-float64-sqrt-eps/tree/umd
+[@stdlib/constants/float64/sqrt-eps]: https://github.com/stdlib-js/constants-float64-sqrt-eps
 
 <!-- </related-links> -->
 

@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import CBRT_EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@deno/mod.js';
+import CBRT_EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@v0.0.8-deno/mod.js';
 ```
 
 #### CBRT_EPS
@@ -57,7 +57,7 @@ var bool = ( CBRT_EPS === 0.0000060554544523933395 );
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@deno/mod.js';
 import max from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-max@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import CBRT_EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@deno/mod.js';
+import CBRT_EPS from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@v0.0.8-deno/mod.js';
 
 var bool;
 var a;

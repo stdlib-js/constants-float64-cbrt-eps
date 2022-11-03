@@ -33,6 +33,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+CBRT_EPS = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/constants-float64-cbrt-eps/tags). For example,
+
+```javascript
 CBRT_EPS = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@v0.0.8-umd/browser.js' )
 ```
 
@@ -45,7 +50,7 @@ var CBRT_EPS = require( 'path/to/vendor/umd/constants-float64-cbrt-eps/index.js'
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@v0.0.8-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -84,7 +89,7 @@ var bool = ( CBRT_EPS === 0.0000060554544523933395 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-max@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@v0.0.8-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-cbrt-eps@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
